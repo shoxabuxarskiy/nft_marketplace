@@ -1,0 +1,91 @@
+.footer {
+    width: 100%;
+    background-color: $dark-gray;
+    .footer_items {
+        width: 100%;
+        padding: 40px 0;
+        .footer_main {
+            width: 100%;
+            // display: grid;
+            // grid-template-columns: 2fr 1fr 2fr;
+            display: flex;
+            justify-content: space-between;
+            .footer_item {
+                .footer_logo {
+                    display: block;
+                    margin-bottom: 30px;
+                }
+                .footer_text {
+                    color: #CCCCCC;
+                    text-decoration: none;
+                }
+                .footer_social {
+                    margin-top: 20px;
+                    .footer_social_icons {
+                        margin-top: 15px;
+                        display: flex;
+                        gap: 10px;
+                        a {
+                            font-size: 23px;
+                        }
+                    }
+                }
+                .footer_title {
+                    font-family: $space-font;
+                    margin-bottom: 25px;
+                    color: #fff;
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+                .footer_list {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .footer_form {
+                    margin-top: 40px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    input {
+                        width: 100%;
+                        border-radius: 20px;
+                        height: 60px;
+                        padding-left: 20px;
+                        font-size: 16px;
+                        border: none;
+                        outline: none;
+                        &::placeholder {
+                            color: $main-dark;
+                            font-size: 16px;
+                        }
+                    }
+                    button {
+                        @include fill-btn-style;
+                        padding: 19px 50px;
+                        position: absolute;
+                        right: 0;
+                        height: 60px;
+                        &:hover {
+                            color: $main-purple;
+                        }
+                    }
+                }
+                &:first-child {
+                    width: 328px;
+                }
+            }
+        }
+        .footer_down {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #CCCCCC;
+            color: #CCCCCC;
+            font-size: 12px;
+        }
+    }
+}

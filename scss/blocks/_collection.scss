@@ -1,0 +1,54 @@
+.collection {
+    width: 100%;
+    .collection_items {
+        padding: 80px 0;
+        width: 100%;
+        .collection_title {
+            @include title-style;
+        }
+        .collection_subtitle {
+           @include subtitle-style;
+        }
+        .collection_content {
+            margin-top: 60px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            .collection_item {
+                .item_img {
+                    @include up-animation;
+                    width: 100%;
+                    border-radius: 20px;
+                }
+                .item_icons {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 15px;
+                    margin-top: 15px;
+                    img {
+                        @include up-animation;
+                        width: 100%;
+                        border-radius: 20px;
+                    }
+                    button {
+                        @include fill-btn-style;
+                        font-family: $space-font;
+                        font-size: 22px;
+                        font-weight: 700;
+                    }
+                }
+                .item_text {
+                    margin-top: 15px;
+                    .item_title {
+                        @include little-title;
+                    }
+                    .item_owner {
+                        @include owner-style;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.join {
+    width: 100%;
+    .join_items {
+        padding-top: 40px;
+        padding-bottom: 80px;
+        width: 100%;
+        .join_content {
+            width: 100%;
+            border-radius: 20px;
+            background-color: $dark-gray;
+            padding: 60px;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 80px;
+            .join_img {
+                width: 100%;
+            }
+            .join_text {
+                .join_title {
+                    @include title-style;
+                }
+                .join_subtitle {
+                    @include subtitle-style;
+                }
+                .join_form {
+                    margin-top: 40px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    input {
+                        width: 100%;
+                        border-radius: 20px;
+                        height: 60px;
+                        padding-left: 20px;
+                        font-size: 16px;
+                        border: none;
+                        outline: none;
+                        &::placeholder {
+                            color: $main-dark;
+                            font-size: 16px;
+                        }
+                    }
+                    button {
+                        @include fill-btn-style;
+                        padding: 19px 50px;
+                        position: absolute;
+                        right: 0;
+                        height: 60px;
+                        &:hover {
+                            color: $main-purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

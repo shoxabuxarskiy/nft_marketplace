@@ -1,0 +1,58 @@
+.discover {
+    width: 100%;
+    .discover_items {
+        width: 100%;
+        padding: 80px 0;
+        .discover_header {
+            @include heading-style;
+        }
+        .discover_content {
+            width: 100%;
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            .discover_item {
+                background: $dark-gray;
+                border-radius: 20px;
+                @include up-animation;
+                .item_img {
+                    width: 100%;
+                    border-radius: 20px 20px 0 0;
+                }
+                .item_text {
+                    padding: 20px 30px 25px 30px;
+                    .item_title {
+                        @include little-title;
+                    }
+                    .item_owner {
+                        @include owner-style;
+                    }
+                    .item_info {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 25px;
+                        .info_item {
+                            .info_title {
+                                font-family: $space-font;
+                                color: $text-gray;
+                                font-size: 12px;
+                            }
+                            .info_value {
+                                font-family: $space-font;
+                                color: #fff;
+                            }
+                            &:last-child {
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .discover_small_btn {
+            display: none;
+        }
+    }
+}

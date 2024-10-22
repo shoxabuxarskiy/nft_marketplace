@@ -1,0 +1,39 @@
+.works {
+    width: 100%;
+    .works_items {
+        width: 100%;
+        padding: 80px 0;
+        .works_title {
+            @include title-style;
+        }
+        .works_subtitle {
+            @include subtitle-style;
+        }
+        .works_content {
+            margin-top: 48px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            .works_item {
+                border-radius: 20px;
+                background-color: $dark-gray;
+                padding: 10px 30px 40px 30px;
+                text-align: center;
+                .item_img {
+                    width: 100%;
+                }
+                .item_text {
+                    margin-top: 20px;
+                    .item_title {
+                        @include little-title;                        
+                    }
+                    .item_descr {
+                        color: #fff;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
